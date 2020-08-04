@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@uniswap/lib": "1.1.1",
-    "@unipomp/core": "1.0.0"
+    "@unipomp/core": "1.0.2"
   },
   "devDependencies": {
     "@types/chai": "^4.2.6",
@@ -36,10 +36,8 @@
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",
-    "copy-v1-artifacts": "ncp ./buildV1 ./build",
     "precompile": "yarn clean",
     "compile": "waffle .waffle.json",
-    "postcompile": "yarn copy-v1-artifacts",
     "pretest": "yarn compile",
     "test": "mocha",
     "prepublishOnly": "yarn test"
