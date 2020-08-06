@@ -16,9 +16,10 @@
   ],
   "dependencies": {
     "@uniswap/lib": "1.1.1",
-    "@unipomp/core": "1.0.2"
+    "@unipomp/core": "1.0.3"
   },
   "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.0.40",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
@@ -29,8 +30,12 @@
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "solc": "0.6.6",
+    "truffle": "^5.1.37",
+    "truffle-contract-size": "^2.0.0",
+    "verify-on-etherscan": "^1.2.1",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "dotenv": "^8.2.0"
   },
   "scripts": {
     "lint": "yarn prettier ./test/*.ts --check",
@@ -40,7 +45,10 @@
     "compile": "waffle .waffle.json",
     "pretest": "yarn compile",
     "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn test",
+    "contract-size": "npx truffle run contract-size",
+    "deploy-rinkeby": "npx truffle migrate --network rinkeby",
+    "verify": "npx truffle run verify"
   },
   "license": "GPL-3.0-or-later"
 }
