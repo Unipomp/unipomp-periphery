@@ -10,7 +10,7 @@ import IUniswapV2Pair from '@unipomp/core/build/contracts/IUniswapV2Pair.json'
 import ERC20 from '../../build/contracts/ERC20.json'
 import WETH9 from '../../build/contracts/WETH9.json'
 
-import UniswapV2Router02 from '../../build/contracts/UniswapV2Router02.json'
+import UnipompRouter from '../../build/contracts/UnipompRouter.json'
 import RouterEventEmitter from '../../build/contracts/RouterEventEmitter.json'
 
 const overrides = {
@@ -43,7 +43,7 @@ export async function v2Fixture(provider: Web3Provider, [wallet]: Wallet[]): Pro
   const factoryV2 = await deployContract(wallet, UnipompFactory, [wallet.address])
 
  
-  const router02 = await deployContract(wallet, UniswapV2Router02, [factoryV2.address, WETH.address], overrides)
+  const router02 = await deployContract(wallet, UnipompRouter, [factoryV2.address, WETH.address], overrides)
 
   // event emitter for testing
   const routerEventEmitter = await deployContract(wallet, RouterEventEmitter, [])

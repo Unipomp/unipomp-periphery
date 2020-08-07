@@ -7440,7 +7440,7 @@ truffle-contract-size@^2.0.0:
     cli-table "^0.3.1"
     yargs "^15.3.1"
 
-truffle-flattener@^1.4.2:
+truffle-flattener@^1.4.2, truffle-flattener@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/truffle-flattener/-/truffle-flattener-1.4.4.tgz#747a99204001f7d6dce43ea92771e1ff6ac3eafb"
   integrity sha512-S/WmvubzlUj1mn56wEI6yo1bmPpKDNdEe5rtyVC1C5iNfZWobD/V69pAYI15IBDJrDqUyh+iXgpTkzov50zpQw==
